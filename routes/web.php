@@ -3,6 +3,7 @@
 use App\Http\Controllers\LevelController;
 use App\Http\Controllers\myController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\KategoriController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -29,3 +30,4 @@ Route::get('/penjualan', [myController::class, 'penjualan'])->name('penjualan');
 
 //JOBSHEET 3
 Route::get('/level', [LevelController::class, 'index'])->name('level.index');
+Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori.index');
