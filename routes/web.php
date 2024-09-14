@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LevelController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\myController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\KategoriController;
@@ -25,9 +26,10 @@ Route::get('category/baby-kid', [ProductController::class, 'baby'])->name('produ
 //     Route::get('category/baby-kid', [ProductController::class, 'baby'])->name('product.bk');
 // });
 
-Route::get('/user/{id}/{name}',[myController::class, 'user'])->name('user');
-Route::get('/penjualan', [myController::class, 'penjualan'])->name('penjualan');
+//Route::get('/user/{id}/{name}',[myController::class, 'user'])->name('user');
+//oute::get('/penjualan', [myController::class, 'penjualan'])->name('penjualan');
 
 //JOBSHEET 3
 Route::get('/level', [LevelController::class, 'index'])->name('level.index');
 Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori.index');
+Route::get('/user', [UserController::class, 'index'])->name('kategori.index');
