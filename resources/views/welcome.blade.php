@@ -26,12 +26,12 @@
             <li>
                 <select id="myDropdown">
                     <option value="Product" selected>Product</option>
-                    <option value="{{ route('product.fb') }}">Food Beverage<option>    
-                    <option value="{{ route('product.beh') }}">Beauty Health<option>    
-                    <option value="{{ route('product.hc') }}">Home Care<option>    
-                    <option value="{{ route('product.bk') }}">Baby Kid<option>    
+                    <option value="{{ route('product.fb') }}">Food Beverage<option>
+                    <option value="{{ route('product.beh') }}">Beauty Health<option>
+                    <option value="{{ route('product.hc') }}">Home Care<option>
+                    <option value="{{ route('product.bk') }}">Baby Kid<option>
                 </select>|</li>
-            <li><a href="{{ route('user', ['id' => '3', 'name' => 'Alwi']) }}">User</a>|</li>
+            <li><a href="{{ route('user') }}">User</a>|</li>
             <li><a href="{{ route('penjualan') }}">Penjualan</a></li>
         </ul>
         </center>

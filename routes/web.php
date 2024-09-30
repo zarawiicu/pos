@@ -32,4 +32,4 @@ Route::get('/penjualan', [myController::class, 'penjualan'])->name('penjualan');
 //JOBSHEET 3
 Route::get('/level', [LevelController::class, 'index'])->name('level.index');
 Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori.index');
-Route::get('/user', [UserController::class, 'index'])->name('user');
+Route::get('/user/', [UserController::class, 'index'])->name('user');
