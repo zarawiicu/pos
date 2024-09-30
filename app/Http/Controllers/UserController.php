@@ -9,11 +9,15 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     public function index() {
-        $user = UserModel::findOr(20, ['username','nama'], function(){
-            about(404);
-        });
+        $user = UserModel::where('username', 'manager9')->firstOrFail();
         return view('user', ['data' => $user]);
     }
 
 }
+
+// public function index($user_id) {
+//     $id = $user_id;
+//     $user = UserModel::findOrFail(['id' => 1]);
+//     return view('user', ['data' => $user]);
+// }
 

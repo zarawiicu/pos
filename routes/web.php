@@ -33,3 +33,8 @@ Route::get('/penjualan', [myController::class, 'penjualan'])->name('penjualan');
 Route::get('/level', [LevelController::class, 'index'])->name('level.index');
 Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori.index');
 Route::get('/user/', [UserController::class, 'index'])->name('user');
+
+// Route::get('/user', function () {
+//     $user_id = request()->user_id;
+//     return view('user', $user_id);
+// })->name('user');
