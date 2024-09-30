@@ -16,7 +16,11 @@
         </tr>
         {{-- @foreach ($data as $d) --}}
             <tr>
+                @if ($data instanceof User)
                 <td>{{ $data->user_id }}</td>
+                @else
+                <p>Count: {{ $count }}</p>
+                @endif
                 <td>{{ $data->username }}</td>
                 <td>{{ $data->nama }}</td>
                 <td>{{ $data->level_id }}</td>

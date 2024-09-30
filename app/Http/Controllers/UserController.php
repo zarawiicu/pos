@@ -8,11 +8,14 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
-    public function index() {
-        $user = UserModel::where('username', 'manager9')->firstOrFail();
-        return view('user', ['data' => $user]);
-    }
+    public function index()
+{
+    $count = UserModel::where('level_id', 2)->count();
+    //dd($count);
+    $user = UserModel::where('level_id', 2)->first();
 
+    return view('user', ['data' => $user, 'count' => $count]);
+}
 }
 
 // public function index($user_id) {
