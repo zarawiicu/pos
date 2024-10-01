@@ -34,6 +34,14 @@ Route::get('/level', [LevelController::class, 'index'])->name('level.index');
 Route::get('/kategori', [KategoriController::class, 'index'])->name('kategori.index');
 Route::get('/user/', [UserController::class, 'index'])->name('user');
 
+//jobsheet 5
+//FORM TAMBAH
+Route::get('/user/tambah', [UserController::class, 'tambah'])->name('tambah');
+Route::post('/user/tambah_simpan', [UserController::class, 'tambah_simpan'])->name('tambah_simpan');
+Route::get('/user/ubah/{id}', [UserController::class, 'ubah'])->name('ubah');
+Route::put('/user/ubah_simpan/{id}', [UserController::class, 'ubah_simpan'])->name('ubah_simpan');
+Route::get('/user/hapus/{id}', [UserController::class, 'hapus'])->name('hapus');
+
 // Route::get('/user', function () {
 //     $user_id = request()->user_id;
 //     return view('user', $user_id);

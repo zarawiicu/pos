@@ -9,8 +9,14 @@ class UserModel extends Model
 {
     use HasFactory;
 
+    public $timestamps = 'false';
     protected $table = 'm_user';
-    protected $primarykey = 'user_id';
-    protected $fillable = ['level_id','username','nama','password'];
+    protected $primaryKey = 'user_id';// User_id tidak terbaca ketika saya dd($user) yang terbaca id. Jadi saya mengganti nama kolom menjadi id
+    protected $fillable = ['user_id','level_id','username','nama','password'];
+
+    public function getIdAttribute()
+    {
+        return strtoupper($this->attributes['user_id']);
+    }
 
 }
