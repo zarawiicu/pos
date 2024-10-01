@@ -10,9 +10,9 @@ class UserController extends Controller
 {
     public function index(UserController $user)
 {
-    $user = UserModel::all();
-    //dd($user);
-    return view('user', ['data' => $user]);
+    $user = UserModel::with('level')->get();
+    dd($user);
+    //return view('user', ['data' => $user]);
 }
 
 public function tambah(){
